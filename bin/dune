@@ -1,4 +1,4 @@
 (executable
  (public_name aocaml)
  (name main)
- (libraries Solutions))
+ (libraries core solutions))
