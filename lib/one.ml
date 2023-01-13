@@ -12,20 +12,11 @@ let rec group input result =
         | [] -> [ int_of_string h ]
         | hd :: tl -> (hd + int_of_string h) :: tl)
 
+(** [first_k k lst] Searches for the first k values in a given list *)
 let rec first_k k lst =
   match lst with
-  | [] -> failwith "first_k"
+  | [] -> [] 
   | h :: t -> if k = 1 then [ h ] else h :: first_k (k - 1) t
-
-(* TODO: Pipe magic??
-  let test : unit =
-    group file_contents [] 
-    |> List.sort ~compare 
-    |> List.rev 
-    |> first_k 3
-    |> Utils.sum 
-    |> string_of_int 
-    |> print_endline *)
 
 let run : unit =
   let inputs = group file_contents [] in

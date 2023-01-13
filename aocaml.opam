@@ -9,7 +9,7 @@ homepage: "https://github.com/jake-pauls/aocaml"
 bug-reports: "https://github.com/jake-pauls/aocaml/issues"
 depends: [
   "ocaml"
-  "dune" {>= "3.6"}
+  "dune" {>= "3.5"}
   "odoc" {with-doc}
 ]
 build: [
